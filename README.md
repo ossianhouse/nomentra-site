@@ -17,7 +17,7 @@ Static website for Nomentra: plain HTML and one stylesheet. No build step, no sc
 
 - **App captures** (`assets/app-home.webp`, `app-status.webp`, `app-travel.webp`): real renders of the app at commit `0c760521`, mounted by a throwaway capture test with synthetic data only (a UK traveller, eight trips in 2026, a Schengen tracker, two personal trackers and a passport deadline). No personal data. Full-size originals and `notes.md` are in `/Users/ossianhouse/APP Dev/nomentra-site-captures/`.
 - **Privacy Policy**: written from the app source on `main` at `f0210f43` (1 October 2026), approved wording in `docs/PRD_wording.md`, Feature PRD 13 and WEB-01/02 in `docs/plan/settings-release-simplification.md`. Re-check it whenever the app's data practices change, and change the “Last updated” date.
-- **Send feedback** is described in the policy as approved for the release (Feature 13, SET-05); it was not yet in the app source at `f0210f43`.
+- **Review**: reconciled against app main `1ca17eda` on 1 October 2026 (`Nomentra-clean/docs/audits/website-source-review-2026-10-01.md`). Send feedback and the privacy link are implemented on main; distribution and website publication are separate.
 
 ## Preview locally
 

@@ -89,7 +89,7 @@
       <li>what you enter yourself: confirmations, corrections, Home countries, trackers, reminders and settings;</li>
       <li>a history of changes to the record.</li>
     </ul>
-    <p>Nomentra does not keep exact coordinates, a location trail, or copies of your photos and videos.</p>
+    <p>Nomentra does not save exact coordinates, a continuous GPS trail, or its own copies of your photos and videos.</p>
     <p>Nomentra has no sign-in and no online account. We do not hold a copy of your record and cannot see it.</p>
   </section>
 
@@ -118,11 +118,11 @@
       <li>visits, meaning places where you stay for a while;</li>
       <li>significant location changes, meaning larger movements;</li>
       <li>your location once when you open Nomentra or return to it;</li>
-      <li>arrival near a supported border, if you choose the Border focused mode.</li>
+      <li>arrival near a supported border, if you choose Border focused mode and allow Always access with Precise Location.</li>
     </ul>
     <p>With While Using the App access, this happens only while Nomentra is open. With Always access, iOS can also deliver visits, significant changes and border arrivals in the background, including when the app is closed.</p>
     <p>Nomentra does not run continuous GPS tracking. Short visits and crossings may be missed.</p>
-    <p>If you turn off Precise Location, Nomentra receives an approximate location and its results are less exact.</p>
+    <p>With Precise Location off, Nomentra receives an approximate location. Border checks are unavailable.</p>
     <p>From each location event Nomentra keeps the date and time, the time zone, the source, the place it resolved to and the quality of the reading. The coordinate itself is not saved.</p>
     <p>You can change or remove location access in iPhone Settings at any time. Removing access stops new collection. It does not delete your saved record.</p>
   </section>
@@ -145,7 +145,7 @@
     <h2 id="apple">Other Apple services</h2>
     <h3>Weather, if you turn it on</h3>
     <p>Country pages can show weather after you choose Show weather. Nomentra then asks Apple’s weather service for the weather at a fixed reference city for that country. The request uses a public coordinate built into the app, never your own location.</p>
-    <p>Apple receives that request and ordinary connection information, which shows which country you are looking at. Weather results are stored on your iPhone for up to 24 hours.</p>
+    <p>Apple receives that request and ordinary connection information, which shows which country you are looking at. Weather results are cached on your iPhone. Results older than 24 hours are not shown and are removed when the cache is next refreshed.</p>
     <h3>Nomentra’s own photos of places</h3>
     <p>Nomentra includes its own catalogue photos of countries and landmarks. These are not your photos. Some are downloaded from Apple’s servers when needed, and Apple receives ordinary connection information for those downloads.</p>
     <h3>Reminders</h3>
@@ -156,27 +156,27 @@
 
   <section aria-labelledby="receive">
     <h2 id="receive">What we receive</h2>
-    <p>Nomentra does not send your travel record, photos or location to us. The only services it contacts are the Apple services described above.</p>
+    <p>Nomentra does not send your travel record, photos or location to us. For automatic app data processing, Nomentra uses the Apple services described above. Links and email open only when you choose them.</p>
     <p>We receive information only in these cases:</p>
     <h3>You email us</h3>
     <p>We receive your email address and whatever you choose to write. If you start the email from Send feedback in the app, the draft includes the app version, build number and iOS version. You can read and edit the draft before sending, and nothing else is attached automatically.</p>
     <p>Our mailbox is provided by Google. We use your message only to reply and to fix the problem.</p>
     <h3>You install a test version through TestFlight</h3>
-    <p>Test versions of Nomentra are distributed through Apple’s TestFlight. Apple shares with us the feedback, screenshots and crash reports that testers choose to send, with basic device details such as iPhone model and iOS version. If we invited you by email, we also have that email address. Apple operates TestFlight under its own terms and privacy policy.</p>
+    <p>Test versions of Nomentra are distributed through Apple’s TestFlight. For TestFlight builds, Apple automatically shares crash reports and testing information with us, including installation status, session and crash counts, app version, device model and iOS version. We also receive feedback and screenshots you choose to send. If we invited you by email, we have that address. Apple operates TestFlight under its own terms and privacy policy.</p>
     <p>We do not sell personal information, show advertising, or track you across other apps and websites.</p>
   </section>
 
   <section aria-labelledby="diagnostics">
     <h2 id="diagnostics">Diagnostics and analytics</h2>
-    <p>Nomentra contains no analytics, advertising or crash-reporting code of its own, and no third-party software development kits.</p>
-    <p>If you have chosen in iPhone Settings to share analytics with app developers, Apple may give us crash and performance reports about Nomentra. Apple produces these reports and controls that setting.</p>
+    <p>Nomentra has no advertising, and no third-party analytics or crash-reporting SDKs. Its own operational diagnostics stay on your iPhone.</p>
+    <p>For App Store versions, if you have chosen in iPhone Settings to share analytics with app developers, Apple may give us crash and performance reports about Nomentra. Apple produces these reports and controls that setting.</p>
     <p>Details of a failed scan are kept on your iPhone so the app can explain what happened. They are not sent to us.</p>
   </section>
 
   <section aria-labelledby="backup">
     <h2 id="backup">Backups</h2>
     <p>This version of Nomentra has no backup or sync feature of its own, and it does not store your record in iCloud itself.</p>
-    <p>Like most app data, your record is included in the backups of your iPhone that you make with iCloud Backup or a computer. Those backups are run by Apple and controlled in your iPhone settings.</p>
+    <p>Your record may be included in an iCloud or computer backup of your iPhone, depending on your backup settings. Manage iCloud Backup in iPhone Settings and computer backups on your computer.</p>
     <p>If you lose your iPhone and have no device backup, we cannot recover your record, because we never had it.</p>
   </section>
 
