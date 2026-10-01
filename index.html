@@ -2,36 +2,86 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nomentra</title>
-<meta name="description" content="Nomentra turns location information into a clear daily history of where you have been.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nomentra — Know where you’ve been</title>
+<meta name="description" content="Nomentra builds a history of your travels from your photos and permitted iPhone location. Then you review and correct it. Now in private beta for iPhone.">
+<link rel="canonical" href="https://nomentra.app/">
+<meta name="theme-color" content="#F3F0E9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1521" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nomentra">
+<meta property="og:title" content="Nomentra — Know where you’ve been">
+<meta property="og:description" content="A history of your travels, built from your photos and permitted iPhone location. Review it, correct it, keep it on your iPhone.">
+<meta property="og:url" content="https://nomentra.app/">
+<meta property="og:image" content="https://nomentra.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nomentra. Know where you’ve been.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="home">
-  <div class="wrap">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <div class="mast"><a href="https://www.ossianhouse.com">Ossian House Holding Ltd</a></div>
+<header class="wrap site-head">
+  <a class="brand" href="./" aria-current="page"><img src="assets/icon-96.png" width="34" height="34" alt="">Nomentra</a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="privacy/">Privacy</a>
+    <a href="support/">Support</a>
+  </nav>
+</header>
 
-    <main>
-      <h1>Nomentra</h1>
-      <p class="lede">Nomentra turns location information into a clear daily history of where you have been.</p>
-
-      <section>
-        <h2>Privacy</h2>
-        <p>Read the <a href="privacy/">Nomentra Privacy Policy</a>.</p>
-      </section>
-
-      <section>
-        <h2>Support</h2>
-        <p>Email <a href="mailto:support@nomentra.app">support@nomentra.app</a>. See the <a href="support/">Support page</a> for what to include.</p>
-      </section>
-    </main>
-
-    <footer>
-      <a href="privacy/">Privacy</a> · <a href="support/">Support</a><br>
-      © 2026 Ossian House Holding Ltd
-    </footer>
-
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <p class="status">Private beta · iPhone</p>
+      <h1>Know where you’ve been.</h1>
+      <p class="lede">Nomentra builds a history of your travels from your photos and permitted iPhone location. Then you review and correct it.</p>
+    </div>
+    <figure class="phones">
+      <div class="phones-row">
+        <div class="phone"><img src="assets/app-home.png" width="375" height="812" alt="Nomentra’s Home screen showing 28 days abroad this year across 2 countries and 1 trip, with the last trip listed as France, then Spain."></div>
+        <div class="phone"><img src="assets/app-travel.png" width="375" height="812" alt="Nomentra’s Travel screen showing 2026 month by month, with 3 days in France in August and 25 days in France and Spain in September."></div>
+      </div>
+      <figcaption>Home and Travel in Nomentra, shown with sample data.</figcaption>
+    </figure>
   </div>
+
+  <section class="benefits" aria-label="What Nomentra does">
+    <div class="wrap">
+      <ul class="benefit-grid">
+        <li>
+          <h2>Understand your travels</h2>
+          <p>See where you were, day by day: the countries you visited, your trips, and the days you spent in each.</p>
+        </li>
+        <li>
+          <h2>Keep your history updated</h2>
+          <p>New photos and permitted location updates add to your record as you go. It isn’t a continuous GPS trace, so some days may need your input.</p>
+        </li>
+        <li>
+          <h2>Stay in control</h2>
+          <p>Your record is stored on your iPhone, with no account. Correct it, export a copy or delete it whenever you choose.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap beta" aria-labelledby="beta-title">
+    <h2 id="beta-title">Private beta</h2>
+    <p>Nomentra is being tested privately on iPhone. There is no public download yet.</p>
+    <p class="note">Nomentra helps you keep a record of your travel. It is not legal, tax or immigration advice.</p>
+  </section>
+</main>
+
+<footer class="wrap site-foot">
+  <nav aria-label="Footer">
+    <a href="privacy/">Privacy</a>
+    <a href="support/">Support</a>
+  </nav>
+  <span>© 2026 Ossian House Holding Ltd</span>
+</footer>
 </body>
 </html>

@@ -1,33 +1,48 @@
 # nomentra.app
 
-Static site for Nomentra, served by GitHub Pages at https://nomentra.app.
+Static website for Nomentra: plain HTML and one stylesheet. No build step, no scripts, no analytics, no third-party files.
 
-| Path | Page | Source of the text |
-|---|---|---|
-| `index.html` | Landing page: name, one line, links to Privacy and Support | owner ruling add. 182 (C) |
-| `privacy/index.html` | https://nomentra.app/privacy | Nomentra repo, `docs/02-pre-building/12-app-store-readiness-specification/0004-privacy-policy-draft-2026-09-06.md` on `main` at `7b9480a0`, verbatim |
-| `support/index.html` | https://nomentra.app/support | same folder, `0005-support-page-draft-2026-09-06.md` at `7b9480a0`, verbatim |
-| `style.css` | shared style: the fixed Phase B palette and the Decision 0176 type ladder (New York titles, SF Pro text), values from `Nomentra/DesignSystem/DesignSystemColorTokens.swift` and `docs/02-pre-building/15-design-playbook/country-cover-final.html` on main | |
-| `CNAME` | custom domain for GitHub Pages | |
+| Path | Page |
+|---|---|
+| `index.html` | Homepage — https://nomentra.app/ |
+| `privacy/index.html` | Privacy Policy — https://nomentra.app/privacy |
+| `support/index.html` | Support — https://nomentra.app/support |
+| `404.html` | Not-found page (served by GitHub Pages) |
+| `style.css` | Shared style. Colours are the app's Phase B tokens from `Nomentra/DesignSystem/DesignSystemColorTokens.swift`; type is system serif (New York) for titles and system sans (SF Pro) for text |
+| `assets/` | App icon sizes, the sharing image (`og.png`) and two app captures |
+| `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | Icons, made from the app's `AppIcon-Light-1024.png` |
+| `CNAME`, `.nojekyll`, `robots.txt` | GitHub Pages custom domain, no Jekyll processing, allow indexing |
 
-## Go-live (do all of this within the same hour; .app is HTTPS-only)
+## Sources
 
-1. On github.com create a **public** repository `ossianhouse/nomentra-site` and upload the contents of this folder (keep the `privacy/` and `support/` folders).
-2. Repository **Settings → Pages**: source = branch `main`, folder `/ (root)`. Custom domain = `nomentra.app`. Tick **Enforce HTTPS** as soon as it becomes available (up to 24 hours after DNS).
-3. Squarespace **Domains → nomentra.app → DNS**: delete the four Squarespace `A` records on `@` and add GitHub's four; change `www` from `ext-sq.squarespace.com` to `ossianhouse.github.io`. Leave `MX 1 smtp.google.com` and the Google `TXT` record untouched (they carry support@nomentra.app).
+- **App captures** (`assets/app-home.png`, `assets/app-travel.png`): real app renders with the test suite's synthetic history (France, then Spain), copied from `Nomentra-clean/outputs/verification/bugs-163-176/final-captures/`. No personal data. They are 375 × 812 px; replace them with 3× captures of the same screens when available.
+- **Privacy Policy**: written from the app source on `main` at `f0210f43` (1 October 2026), Feature PRD 13 and WEB-01/02 in `docs/plan/settings-release-simplification.md`. Re-check it whenever the app's data practices change, and change the “Last updated” date.
+- **Send feedback** is described in the policy as approved for the release (Feature 13, SET-05); it was not yet in the app source at `f0210f43`.
+
+## Preview locally
+
+```
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Then open http://127.0.0.1:8765/.
+
+## Publication (not done yet — needs the owner's approval)
+
+Status on 1 October 2026: this folder is a local git repository only. No GitHub repository exists at `ossianhouse/nomentra-site`, and https://nomentra.app still serves the Squarespace “under construction” page.
+
+1. Create or confirm the GitHub repository and push `main`.
+2. Repository **Settings → Pages**: source = branch `main`, folder `/ (root)`; custom domain `nomentra.app`.
+3. In Squarespace **Domains → nomentra.app → DNS**, replace the four Squarespace `A` records on `@` and the `www` CNAME:
 
 ```
 A      @     185.199.108.153
 A      @     185.199.109.153
 A      @     185.199.110.153
 A      @     185.199.111.153
-CNAME  www   ossianhouse.github.io
+CNAME  www   <github-account>.github.io
 ```
 
-4. In `ossianhouse/ossianhouse-site` upload the three changed files (`index.html`, `privacy.html`, `support.html`) so the old pages forward to nomentra.app.
-5. Check https://nomentra.app/privacy and https://nomentra.app/support in a private window; then tick row 97 of the TestFlight checklist.
-
-## Updating
-
-- The "Last updated" date on the privacy page is the day it is published. Change it whenever the policy text changes.
-- Held sentences (iCloud, file backup, optional downloads, opt-in diagnostics) live as hold notes in record 0004; publish them here on the day those controls ship.
+   Leave `MX 1 smtp.google.com` and the `google-site-verification` TXT record untouched; they carry support@nomentra.app.
+4. When the certificate is issued, tick **Enforce HTTPS** (`.app` domains only work over HTTPS).
+5. Verify https://nomentra.app/, `/privacy`, `/support` and https://www.nomentra.app in a private window, and send a test email to support@nomentra.app.
