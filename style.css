@@ -60,17 +60,18 @@ p:last-child{margin-bottom:0}
 .site-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--teal);text-decoration-thickness:2px}
 
 /* Home — hero */
-.hero{display:grid;gap:40px;padding-top:28px;padding-bottom:64px;align-items:center}
+.hero{display:grid;gap:44px;padding-top:28px;padding-bottom:64px}
 .status{display:inline-flex;align-items:center;gap:8px;margin:0 0 20px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;color:var(--ink)}
 .status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal)}
 .hero h1{font-size:clamp(42px,9.5vw,72px);line-height:1.04;font-weight:500;letter-spacing:-.02em;margin-bottom:20px}
 .lede{font-size:clamp(19px,2.4vw,22px);line-height:1.45;color:var(--ink-2);max-width:31em;margin:0}
 
 .phones{margin:0;display:flex;flex-direction:column;align-items:center}
-.phones-row{display:flex;justify-content:center;align-items:flex-start;gap:14px}
-.phone{flex:0 1 232px;min-width:0;border:7px solid var(--bezel);border-radius:34px;overflow:hidden;background:var(--bezel);box-shadow:var(--shadow)}
-.phone img{width:100%;aspect-ratio:375/812;border-radius:27px}
+.phones-row{display:flex;justify-content:center;align-items:flex-start;gap:14px;width:100%}
+.phone{flex:0 1 272px;min-width:0;border:7px solid var(--bezel);border-radius:34px;overflow:hidden;background:var(--bezel);box-shadow:var(--shadow)}
+.phone img{width:100%;aspect-ratio:786/1704;border-radius:27px}
 .phone:nth-child(2){margin-top:36px}
+.phone:nth-child(3){display:none}
 .phones figcaption{margin-top:18px;font-size:13px;color:var(--ink-2);text-align:center}
 
 /* Home — benefits */
@@ -110,12 +111,18 @@ p:last-child{margin-bottom:0}
 .site-foot nav{display:flex;gap:4px;margin-left:-10px}
 .site-foot a{color:var(--ink-2);padding:10px;border-radius:8px}
 .site-foot a:hover{color:var(--ink)}
-.site-foot span a{padding:10px 0}
+.site-foot span a{display:inline-block;padding:12px 0}
 
+@media (min-width:640px){
+  .phone:nth-child(3){display:block}
+  .phones-row{gap:20px}
+}
 @media (min-width:860px){
   .site-head{padding-top:32px;padding-bottom:32px}
-  .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;padding-top:48px;padding-bottom:96px}
-  .phones-row{gap:18px}
+  .hero{gap:64px;padding-top:48px;padding-bottom:96px}
+  .phones-row{gap:36px}
+  .phone{border-width:8px;border-radius:40px}
+  .phone img{border-radius:32px}
   .benefits{padding-top:72px;padding-bottom:72px}
   .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
   .beta{padding-top:72px;padding-bottom:88px}

@@ -9,14 +9,14 @@ Static website for Nomentra: plain HTML and one stylesheet. No build step, no sc
 | `support/index.html` | Support — https://nomentra.app/support |
 | `404.html` | Not-found page (served by GitHub Pages) |
 | `style.css` | Shared style. Colours are the app's Phase B tokens from `Nomentra/DesignSystem/DesignSystemColorTokens.swift`; type is system serif (New York) for titles and system sans (SF Pro) for text |
-| `assets/` | App icon sizes, the sharing image (`og.png`) and two app captures |
+| `assets/` | App icon sizes, the sharing image (`og.png`) and three app captures |
 | `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | Icons, made from the app's `AppIcon-Light-1024.png` |
 | `CNAME`, `.nojekyll`, `robots.txt` | GitHub Pages custom domain, no Jekyll processing, allow indexing |
 
 ## Sources
 
-- **App captures** (`assets/app-home.png`, `assets/app-travel.png`): real app renders with the test suite's synthetic history (France, then Spain), copied from `Nomentra-clean/outputs/verification/bugs-163-176/final-captures/`. No personal data. They are 375 × 812 px; replace them with 3× captures of the same screens when available.
-- **Privacy Policy**: written from the app source on `main` at `f0210f43` (1 October 2026), Feature PRD 13 and WEB-01/02 in `docs/plan/settings-release-simplification.md`. Re-check it whenever the app's data practices change, and change the “Last updated” date.
+- **App captures** (`assets/app-home.webp`, `app-status.webp`, `app-travel.webp`): real renders of the app at commit `0c760521`, mounted by a throwaway capture test with synthetic data only (a UK traveller, eight trips in 2026, a Schengen tracker, two personal trackers and a passport deadline). No personal data. Full-size originals and `notes.md` are in `/Users/ossianhouse/APP Dev/nomentra-site-captures/`.
+- **Privacy Policy**: written from the app source on `main` at `f0210f43` (1 October 2026), approved wording in `docs/PRD_wording.md`, Feature PRD 13 and WEB-01/02 in `docs/plan/settings-release-simplification.md`. Re-check it whenever the app's data practices change, and change the “Last updated” date.
 - **Send feedback** is described in the policy as approved for the release (Feature 13, SET-05); it was not yet in the app source at `f0210f43`.
 
 ## Preview locally
@@ -29,7 +29,7 @@ Then open http://127.0.0.1:8765/.
 
 ## Publication (not done yet — needs the owner's approval)
 
-Status on 1 October 2026: this folder is a local git repository only. No GitHub repository exists at `ossianhouse/nomentra-site`, and https://nomentra.app still serves the Squarespace “under construction” page.
+Status on 1 October 2026: the public repository `ossianhouse/nomentra-site` exists and is empty; nothing has been pushed. https://nomentra.app still serves the Squarespace “under construction” page.
 
 1. Create or confirm the GitHub repository and push `main`.
 2. Repository **Settings → Pages**: source = branch `main`, folder `/ (root)`; custom domain `nomentra.app`.
