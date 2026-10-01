@@ -110,6 +110,7 @@ p:last-child{margin-bottom:0}
 .site-foot nav{display:flex;gap:4px;margin-left:-10px}
 .site-foot a{color:var(--ink-2);padding:10px;border-radius:8px}
 .site-foot a:hover{color:var(--ink)}
+.site-foot span a{padding:10px 0}
 
 @media (min-width:860px){
   .site-head{padding-top:32px;padding-bottom:32px}
