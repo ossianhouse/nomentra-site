@@ -81,11 +81,11 @@ p:last-child{margin-bottom:0}
 .benefit-grid h2{font-size:23px;line-height:1.2;font-weight:500;margin-bottom:8px}
 .benefit-grid p{color:var(--ink-2);max-width:34em}
 
-/* Home — beta */
-.beta{padding-top:56px;padding-bottom:64px}
-.beta h2{font-size:28px;line-height:1.15;font-weight:500;margin-bottom:10px}
-.beta p{color:var(--ink-2);max-width:36em}
-.beta .note{font-size:15px;margin-top:20px}
+/* Home — closing */
+.closing{display:grid;gap:36px;padding-top:56px;padding-bottom:64px}
+.closing h2{font-size:28px;line-height:1.15;font-weight:500;margin-bottom:10px}
+.closing p{color:var(--ink-2);max-width:32em}
+.closing .note{font-size:15px;max-width:none}
 
 /* Document pages */
 .doc{padding-top:20px;padding-bottom:72px}
@@ -116,6 +116,7 @@ p:last-child{margin-bottom:0}
 @media (min-width:640px){
   .phone:nth-child(3){display:block}
   .phones-row{gap:20px}
+  .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
 }
 @media (min-width:860px){
   .site-head{padding-top:32px;padding-bottom:32px}
@@ -124,8 +125,9 @@ p:last-child{margin-bottom:0}
   .phone{border-width:8px;border-radius:40px}
   .phone img{border-radius:32px}
   .benefits{padding-top:72px;padding-bottom:72px}
-  .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
-  .beta{padding-top:72px;padding-bottom:88px}
+  .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 40px}
+  .closing{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 56px;padding-top:72px;padding-bottom:88px}
+  .closing .note{grid-column:1 / -1}
   .doc{padding-top:32px;padding-bottom:96px}
 }
 @media (max-width:359px){
