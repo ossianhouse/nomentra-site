@@ -73,6 +73,11 @@ p:last-child{margin-bottom:0}
 .phone:nth-child(2){margin-top:36px}
 .phone:nth-child(3){display:none}
 .phones figcaption{margin-top:18px;font-size:13px;color:var(--ink-2);text-align:center}
+.phones.more{margin:0 auto;padding-top:56px}
+.phones.more .phones-row{flex-wrap:wrap;row-gap:20px}
+.phones.more .phone{flex:0 1 calc(50% - 7px);max-width:272px}
+.phones.more .phone:nth-child(2){margin-top:0}
+.phones.more .phone:nth-child(3){display:block}
 
 /* Home — benefits */
 .benefits{background:var(--band);padding-top:56px;padding-bottom:56px}
@@ -116,6 +121,9 @@ p:last-child{margin-bottom:0}
 @media (min-width:640px){
   .phone:nth-child(3){display:block}
   .phones-row{gap:20px}
+  .phones.more .phones-row{flex-wrap:nowrap}
+  .phones.more .phone{flex:0 1 272px}
+  .phones.more .phone:nth-child(2){margin-top:36px}
   .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
 }
 @media (min-width:860px){
@@ -126,6 +134,7 @@ p:last-child{margin-bottom:0}
   .phone img{border-radius:32px}
   .benefits{padding-top:72px;padding-bottom:72px}
   .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 40px}
+  .phones.more{padding-top:80px}
   .closing{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 56px;padding-top:72px;padding-bottom:88px}
   .closing .note{grid-column:1 / -1}
   .doc{padding-top:32px;padding-bottom:96px}
