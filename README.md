@@ -27,22 +27,22 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Then open http://127.0.0.1:8765/.
 
-## Publication (not done yet — needs the owner's approval)
+## Publication
 
-Status on 1 October 2026: the public repository `ossianhouse/nomentra-site` exists and is empty; nothing has been pushed. https://nomentra.app still serves the Squarespace “under construction” page.
+Live since 2 October 2026 at https://nomentra.app, served by GitHub Pages from `main` of `ossianhouse/nomentra-site` (custom domain `nomentra.app`, HTTPS enforced).
 
-1. Create or confirm the GitHub repository and push `main`.
-2. Repository **Settings → Pages**: source = branch `main`, folder `/ (root)`; custom domain `nomentra.app`.
-3. In Squarespace **Domains → nomentra.app → DNS**, replace the four Squarespace `A` records on `@` and the `www` CNAME:
+DNS is managed in Squarespace (**Domains → nomentra.app → DNS Settings**):
 
 ```
 A      @     185.199.108.153
 A      @     185.199.109.153
 A      @     185.199.110.153
 A      @     185.199.111.153
-CNAME  www   <github-account>.github.io
+CNAME  www   ossianhouse.github.io
+MX     @     smtp.google.com  (priority 1)   — mail, do not change
+TXT    @     google-site-verification=…      — do not change
 ```
 
-   Leave `MX 1 smtp.google.com` and the `google-site-verification` TXT record untouched; they carry support@nomentra.app.
-4. When the certificate is issued, tick **Enforce HTTPS** (`.app` domains only work over HTTPS).
-5. Verify https://nomentra.app/, `/privacy`, `/support` and https://www.nomentra.app in a private window, and send a test email to support@nomentra.app.
+To update the site: commit on `main`, then `git push origin main`. This repository uses its own deploy key (`core.sshCommand` in the local git config). Pages redeploys within a minute or two.
+
+This site and the company site (ossianhouse.com) are kept independent: no links from here to the company site.
