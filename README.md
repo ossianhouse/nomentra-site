@@ -9,13 +9,16 @@ Static website for Nomentra: plain HTML and one stylesheet. No build step, no sc
 | `support/index.html` | Support — https://nomentra.app/support |
 | `404.html` | Not-found page (served by GitHub Pages) |
 | `style.css` | Shared style. Colours are the app's Phase B tokens from `Nomentra/DesignSystem/DesignSystemColorTokens.swift`; type is system serif (New York) for titles and system sans (SF Pro) for text. The homepage's top band is the app's brand ribbon: `homeHero` colours and `RibbonArtwork.swift` geometry at rest (single style) |
-| `assets/` | App icon sizes, the sharing image (`og.png`) and six app captures |
+| `assets/` | App icon sizes, the sharing image (`og.png`, drawn from `tools/og.html`) and four app images (`app-home-ribbon.webp`, `app-tracker-detail.webp`, `app-calendar-month.webp`, `app-country-page.webp`) |
+| `tools/update-captures.py` | Turns `captures/<slot>.png` into the four app images (786 × 1704 WebP), with a placeholder for any slot that has no capture; `--og` also redraws `og.png`. Needs Pillow; `--og` needs Google Chrome |
+| `captures/` | Local only (ignored by Git, so never published): the PNG captures the tool reads |
 | `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | Icons, made from the app's `AppIcon-Light-1024.png` |
 | `CNAME`, `.nojekyll`, `robots.txt` | GitHub Pages custom domain, no Jekyll processing, allow indexing |
 
 ## Sources
 
-- **App captures** (`assets/app-home.webp`, `app-status.webp`, `app-travel.webp`, `app-achievements.webp`, `app-deadlines.webp`, `app-builder.webp`): real renders of the app at commit `0c760521`, mounted by a throwaway capture test with synthetic data only (a UK traveller, nine trips in 2026, preset and personal trackers, two deadlines, five achievements). No personal data. Full-size originals and `notes.md` are in `/Users/ossianhouse/APP Dev/nomentra-site-captures/`.
+- **App images**: placeholders (Warm stone canvas with the wordmark) until the next build's captures exist. Save each as a portrait iPhone PNG, light appearance, under `captures/` as `home-ribbon.png` (Home with the ribbon hero and trackers), `tracker-detail.png` (a tracker's detail page), `calendar-month.png` (the calendar month with flags) and `country-page.png` (a country page with photos); run `python3 tools/update-captures.py`; then replace each image's alt text in `index.html` ("Nomentra") with a description of what it shows. The six earlier captures (app commit `0c760521`, synthetic data) showed the retired photo hero and were removed; their originals stay in `/Users/ossianhouse/APP Dev/nomentra-site-captures/`.
+- **Homepage copy**: the owner's final App Store description of 13 October 2026 (tagline, lead, Collect the world, Relive every trip, Know where you stand, Private, on your phone, Plans) and the app's not-advice sentence (`AppCopy` `notAdvice`), which every page's footer carries. The band's six short lines are the store screenshot captions.
 - **Privacy Policy**: written from the app source on `main` at `f0210f43` (1 October 2026), approved wording in `docs/PRD_wording.md`, Feature PRD 13 and WEB-01/02 in `docs/plan/settings-release-simplification.md`. Re-check it whenever the app's data practices change, and change the “Last updated” date.
 - **Review**: reconciled against app main `1ca17eda` on 1 October 2026 (`Nomentra-clean/docs/audits/website-source-review-2026-10-01.md`). Send feedback and the privacy link are implemented on main; distribution and website publication are separate.
 
