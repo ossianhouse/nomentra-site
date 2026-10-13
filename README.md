@@ -8,7 +8,7 @@ Static website for Nomentra: plain HTML and one stylesheet. No build step, no sc
 | `privacy/index.html` | Privacy Policy — https://nomentra.app/privacy |
 | `support/index.html` | Support — https://nomentra.app/support |
 | `404.html` | Not-found page (served by GitHub Pages) |
-| `style.css` | Shared style. Colours are the app's Phase B tokens from `Nomentra/DesignSystem/DesignSystemColorTokens.swift`; type is system serif (New York) for titles and system sans (SF Pro) for text |
+| `style.css` | Shared style. Colours are the app's Phase B tokens from `Nomentra/DesignSystem/DesignSystemColorTokens.swift`; type is system serif (New York) for titles and system sans (SF Pro) for text. The homepage's top band is the app's brand ribbon: `homeHero` colours and `RibbonArtwork.swift` geometry at rest (single style) |
 | `assets/` | App icon sizes, the sharing image (`og.png`) and six app captures |
 | `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | Icons, made from the app's `AppIcon-Light-1024.png` |
 | `CNAME`, `.nojekyll`, `robots.txt` | GitHub Pages custom domain, no Jekyll processing, allow indexing |
