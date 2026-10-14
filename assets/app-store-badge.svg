@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" role="img" aria-label="App Store">
+  <!-- Placeholder until launch: replace with Apple's official App Store badge and the store link. -->
+  <rect x="0.5" y="0.5" width="119" height="39" rx="8" fill="#0B172A" stroke="#A6A6A6"/>
+  <text x="60" y="26" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif" font-size="15" font-weight="600">App Store</text>
+</svg>

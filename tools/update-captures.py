@@ -11,6 +11,7 @@ and save it under captures/ with exactly this name:
     captures/tracker-detail.png  -> assets/app-tracker-detail.webp  a tracker's detail page
     captures/calendar-month.png  -> assets/app-calendar-month.webp  the calendar month with flags
     captures/country-page.png    -> assets/app-country-page.webp    a country page with photos
+    captures/trip-page.png       -> assets/app-trip-page.webp       a trip's page: its photos and its days
 
 Each capture is fitted to 786 x 1704 px (the page's phone size; any portrait
 iPhone size works, the few extra rows are trimmed evenly) and saved as WebP.
@@ -34,7 +35,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SLOTS = ['home-ribbon', 'tracker-detail', 'calendar-month', 'country-page']
+SLOTS = ['home-ribbon', 'tracker-detail', 'calendar-month', 'country-page', 'trip-page']
 SIZE = (786, 1704)
 CANVAS, INK = '#E3DFD8', '#0B172A'
 WORDMARK_FONT = '/System/Library/Fonts/SFNS.ttf'
