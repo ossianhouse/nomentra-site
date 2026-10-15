@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy Policy — Nomentra</title>
-<meta name="description" content="How Nomentra for iPhone handles your photos, location and travel record, what leaves your iPhone, and how to export or delete your data.">
+<meta name="description" content="How Nomentra for iPhone handles your photos, location and travel record, what leaves your iPhone, and how to back up or delete your data.">
 <link rel="canonical" href="https://nomentra.app/privacy/">
 <meta name="theme-color" content="#F3F0E9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1521" media="(prefers-color-scheme: dark)">
@@ -36,7 +36,7 @@
 
 <main id="main" class="wrap narrow doc">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 14 October 2026</p>
+  <p class="updated">Last updated: 15 October 2026</p>
   <p class="intro">This policy explains what Nomentra for iPhone does with your information, and what this website does. It describes the current version of the app.</p>
 
   <section class="panel" aria-labelledby="glance">
@@ -44,10 +44,10 @@
     <ul>
       <li>Your travel record is stored on your iPhone. There is no online account, and we do not receive your record.</li>
       <li>Nomentra reads photo dates and locations, and your iPhone’s location, only with your permission.</li>
-      <li>Exact coordinates are used to work out a place. They are not saved.</li>
+      <li>Coordinates are used to work out a place. Only your latest location is kept, for up to six hours, to tell a flight from a stay. No trail is stored.</li>
       <li>Some information does leave your iPhone. Apple may receive a location to name a place, and Nomentra uses a few other Apple services described below.</li>
       <li>No advertising, no third-party analytics and no tracking.</li>
-      <li>You can export or delete your record at any time.</li>
+      <li>You can back up your record to your own iCloud, and delete it, at any time.</li>
     </ul>
   </section>
 
@@ -62,8 +62,7 @@
       <li><a href="#apple">Other Apple services</a></li>
       <li><a href="#receive">What we receive</a></li>
       <li><a href="#diagnostics">Diagnostics and analytics</a></li>
-      <li><a href="#backup">Backups</a></li>
-      <li><a href="#export">Exporting your record</a></li>
+      <li><a href="#backup">iCloud backup</a></li>
       <li><a href="#delete">Deleting your data</a></li>
       <li><a href="#retention">How long data is kept</a></li>
       <li><a href="#website">This website</a></li>
@@ -89,7 +88,7 @@
       <li>what you enter yourself: confirmations, corrections, Home countries, trackers, reminders and settings;</li>
       <li>a history of changes to the record.</li>
     </ul>
-    <p>Nomentra does not save exact coordinates, a continuous GPS trail, or its own copies of your photos and videos.</p>
+    <p>Nomentra does not keep a GPS trail or its own copies of your photos and videos. It keeps one location at a time: the latest fix, with its time, accuracy and country, in a protected file on your iPhone for up to six hours, only to tell a flight from a stay. It is never backed up or sent anywhere, and it is deleted after it expires.</p>
     <p>Nomentra has no sign-in and no online account. We do not hold a copy of your record and cannot see it.</p>
   </section>
 
@@ -123,7 +122,7 @@
     <p>With While Using the App access, this happens only while Nomentra is open. With Always access, iOS can also deliver visits, significant changes and border arrivals in the background, including when the app is closed.</p>
     <p>Nomentra does not run continuous GPS tracking. Short visits and crossings may be missed.</p>
     <p>With Precise Location off, Nomentra receives an approximate location. Border checks are unavailable.</p>
-    <p>From each location event Nomentra keeps the date and time, the time zone, the source, the place it resolved to and the quality of the reading. The coordinate itself is not saved.</p>
+    <p>From each location event Nomentra keeps the date and time, the time zone, the source, the place it resolved to and the quality of the reading. The coordinate itself is not saved, apart from the latest fix held for up to six hours as described above.</p>
     <p>You can change or remove location access in iPhone Settings at any time. Removing access stops new collection. It does not delete your saved record.</p>
   </section>
 
@@ -137,7 +136,7 @@
       <li>Apple receives the coordinate together with ordinary connection information, such as your IP address.</li>
       <li>Nomentra does not send the photo or your travel record with the request.</li>
     </ul>
-    <p>Once the place is known, the coordinate is discarded. It is not written to your record or to logs.</p>
+    <p>Once the place is known, the coordinate is discarded. It is not written to your record or to logs. The only exception is the latest location fix, held for up to six hours to tell a flight from a stay.</p>
     <p>Apple handles these requests under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
   </section>
 
@@ -172,32 +171,26 @@
   </section>
 
   <section aria-labelledby="backup">
-    <h2 id="backup">Backups</h2>
-    <p>This version of Nomentra has no backup or sync feature of its own, and it does not store your record in iCloud itself.</p>
-    <p>Your record may be included in an iCloud or computer backup of your iPhone, depending on your backup settings. Manage iCloud Backup in iPhone Settings and computer backups on your computer.</p>
-    <p>If you lose your iPhone and have no device backup, we cannot recover your record, because we never had it.</p>
-  </section>
-
-  <section aria-labelledby="export">
-    <h2 id="export">Exporting your record</h2>
-    <p>In Nomentra, open Settings, then Privacy &amp; data, then Export your record. Nomentra prepares a readable file containing your places, days, evidence entries, corrections and trackers. Evidence entries include references to photos, not the photos themselves.</p>
-    <p>The export does not include photos, videos or coordinates.</p>
-    <p>You choose where the file goes, using the iOS share sheet. Nomentra does not send it anywhere itself. Once you share or save the file, that copy is outside Nomentra’s control.</p>
-    <p>An export is a copy for you to read. It is not a backup that can be restored into the app.</p>
+    <h2 id="backup">iCloud backup</h2>
+    <p>Nomentra has an iCloud backup switch in Settings, under Privacy &amp; data. It is off until you turn it on.</p>
+    <p>When it is on, Nomentra copies your travel record into its own folder in your iCloud Drive: after each completed scan, shortly after a change to your record, and whenever you tap Back up now. It keeps the few most recent copies. Photos, videos, settings and the latest location fix are not included.</p>
+    <p>The copy goes to your own iCloud account, under Apple’s iCloud terms. We never receive it and cannot read it. If iCloud Drive is off, unavailable or full, the status line in Settings says so and no backup is claimed.</p>
+    <p>Restore, on the same page, lists your iCloud backups newest first. Nothing changes until you choose one and confirm. A restore replaces the record on this iPhone with that copy; if it cannot be read, your current record is left untouched.</p>
+    <p>Your record may also be included in an iCloud or computer backup of your whole iPhone, depending on your iPhone backup settings.</p>
   </section>
 
   <section aria-labelledby="delete">
     <h2 id="delete">Deleting your data</h2>
-    <p>In Nomentra, open Settings, then Privacy &amp; data, then Delete all data. After you confirm, Nomentra removes its record and settings from your iPhone, including evidence, places, days, corrections, trackers, reminders, your weather choice and stored weather, the hidden-photo list and prepared export files.</p>
+    <p>In Nomentra, open Settings, then Privacy &amp; data, then Delete all data. After you confirm, Nomentra removes its record and settings from your iPhone, including evidence, places, days, corrections, trackers, reminders, your weather choice and stored weather, the hidden-photo list and temporary backup files.</p>
     <p>Delete all data does not:</p>
     <ul>
       <li>delete anything from your Photos library;</li>
-      <li>remove files you have already exported or shared;</li>
+      <li>remove backups already saved in your iCloud Drive; delete those in the Files app if you want them gone;</li>
       <li>change the permissions you gave Nomentra in iPhone Settings;</li>
       <li>remove your record from device backups made earlier.</li>
     </ul>
     <p>Deleting the app from your iPhone also removes its data from the device.</p>
-    <p>Because your record exists only on your device and in your own backups, we cannot view, export or delete it for you.</p>
+    <p>Because your record exists only on your device and in your own backups, we cannot view, copy or delete it for you.</p>
   </section>
 
   <section aria-labelledby="retention">
