@@ -163,6 +163,11 @@ p:last-child{margin-bottom:0}
 .site-foot a:hover{color:var(--ink)}
 .site-foot span a{display:inline-block;padding:12px 0}
 
+@media (max-width:639px){
+  .hero .phones-row{flex-wrap:wrap;row-gap:20px}
+  .hero .phone{flex-basis:calc(50% - 7px);max-width:272px}
+  .hero .phone:nth-child(3){display:block}
+}
 @media (min-width:640px){
   .phone:nth-child(3){display:block}
   .phones-row{gap:20px}
