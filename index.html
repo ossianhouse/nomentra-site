@@ -39,7 +39,6 @@
     <div class="ribbon-art" aria-hidden="true"><span class="ribbon-ring"></span><span class="ribbon-strip"></span></div>
     <div class="wrap band-hero">
       <p class="status">For iPhone</p>
-      <button class="status film-open" type="button" popovertarget="film">Watch the video</button>
       <h1>Your photos become the story of everywhere you have been.</h1>
       <ul class="feature-row">
         <li>Your days, counted</li>
@@ -57,8 +56,15 @@
     <figure class="phones">
       <div class="phones-row">
         <div class="phone"><img src="assets/app-home-ribbon.webp?v=20261114" width="786" height="1704" alt="Nomentra Home with travel totals, recent travel and trackers."></div>
-        <div class="phone"><img src="assets/app-tracker-detail.webp" width="786" height="1704" alt="The Cyprus 183-day presence check with its count, remaining days and monthly breakdown."></div>
-        <div class="phone"><img src="assets/app-achievements.webp" width="786" height="1704" loading="lazy" alt="Achievements in Nomentra: Country Collector, US states, UNESCO World Heritage and Capitals in Asia."></div>
+        <div class="phone film-phone">
+          <video autoplay muted loop playsinline preload="auto" width="720" height="1280" poster="assets/nomentra-film-poster.webp" aria-label="Nomentra video">
+            <source src="assets/nomentra-film.mp4" type="video/mp4">
+          </video>
+          <button class="film-sound" type="button" aria-pressed="false" aria-label="Sound on">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path class="film-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path class="film-sound-on" d="M16 8.5a5 5 0 010 7M18.8 6a8.5 8.5 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+          </button>
+        </div>
+        <div class="phone"><img src="assets/app-tracker-detail.webp" width="786" height="1704" loading="lazy" alt="The Cyprus 183-day presence check with its count, remaining days and monthly breakdown."></div>
       </div>
     </figure>
   </div>
@@ -89,7 +95,7 @@
   <figure class="wrap phones more">
     <div class="phones-row">
       <div class="phone"><img src="assets/app-calendar-month.webp" width="786" height="1704" loading="lazy" alt="A monthly calendar with each day marked by its country flag."></div>
-      <div class="phone"><img src="assets/app-country-page.webp" width="786" height="1704" loading="lazy" alt="A Country page with a cover photo, visit summary, relevant tracker, visits and places."></div>
+      <div class="phone"><img src="assets/app-achievements.webp" width="786" height="1704" loading="lazy" alt="Achievements in Nomentra: Country Collector, US states, UNESCO World Heritage and Capitals in Asia."></div>
       <div class="phone"><img src="assets/app-trip-page.webp" width="786" height="1704" loading="lazy" alt="A Trip page with its cover photo, dates, countries, stops and photo album."></div>
     </div>
   </figure>
@@ -108,17 +114,10 @@
   </div>
 </main>
 
-<div id="film" class="film-pop" popover>
-  <video controls playsinline preload="none" width="720" height="1280" poster="assets/nomentra-film-poster.webp" aria-label="Nomentra video">
-    <source src="assets/nomentra-film.mp4" type="video/mp4">
-    <a href="assets/nomentra-film.mp4">Nomentra video</a>
-  </video>
-  <button class="film-close" type="button" popovertarget="film" popovertargetaction="hide" aria-label="Close">&times;</button>
-</div>
 <script>
-(function(){var p=document.getElementById('film');if(!p||!p.showPopover)return;var v=p.querySelector('video');
-document.querySelector('.film-open').addEventListener('click',function(){var r=v.play();if(r&&r.catch)r.catch(function(){})});
-p.addEventListener('toggle',function(e){if(e.newState!=='open')v.pause()});})();
+(function(){var w=document.querySelector('.film-phone');if(!w)return;var v=w.querySelector('video'),b=w.querySelector('.film-sound');
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause()}
+b.addEventListener('click',function(){v.muted=!v.muted;var on=!v.muted;b.setAttribute('aria-pressed',on?'true':'false');b.setAttribute('aria-label',on?'Sound off':'Sound on');if(v.paused){var r=v.play();if(r&&r.catch)r.catch(function(){})}});})();
 </script>
 
 <footer class="wrap site-foot">
