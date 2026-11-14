@@ -39,6 +39,7 @@
     <div class="ribbon-art" aria-hidden="true"><span class="ribbon-ring"></span><span class="ribbon-strip"></span></div>
     <div class="wrap band-hero">
       <p class="status">For iPhone</p>
+      <button class="status film-open" type="button" popovertarget="film">Watch the video</button>
       <h1>Your photos become the story of everywhere you have been.</h1>
       <ul class="feature-row">
         <li>Your days, counted</li>
@@ -55,16 +56,10 @@
     <p class="lede">Nomentra reads the photos already on your iPhone and builds your travel history: every country, every trip, every day, with your pictures on it. From that history it collects your achievements, from capitals to World Heritage sites, and counts the days that matter for tax and visa rules, with the official rule one tap away. Your photos and videos stay in your photo library.</p>
     <figure class="phones">
       <div class="phones-row">
-        <div class="phone"><img src="assets/app-home-ribbon.webp" width="786" height="1704" alt="Nomentra Home with travel totals, recent travel and trackers."></div>
+        <div class="phone"><img src="assets/app-home-ribbon.webp?v=20261114" width="786" height="1704" alt="Nomentra Home with travel totals, recent travel and trackers."></div>
         <div class="phone"><img src="assets/app-tracker-detail.webp" width="786" height="1704" alt="The Cyprus 183-day presence check with its count, remaining days and monthly breakdown."></div>
         <div class="phone"><img src="assets/app-achievements.webp" width="786" height="1704" loading="lazy" alt="Achievements in Nomentra: Country Collector, US states, UNESCO World Heritage and Capitals in Asia."></div>
       </div>
-    </figure>
-    <figure class="film">
-      <video controls playsinline preload="none" width="720" height="1280" poster="assets/nomentra-film-poster.webp" aria-label="Nomentra video">
-        <source src="assets/nomentra-film.mp4" type="video/mp4">
-        <a href="assets/nomentra-film.mp4">Nomentra video</a>
-      </video>
     </figure>
   </div>
 
@@ -112,6 +107,19 @@
     </section>
   </div>
 </main>
+
+<div id="film" class="film-pop" popover>
+  <video controls playsinline preload="none" width="720" height="1280" poster="assets/nomentra-film-poster.webp" aria-label="Nomentra video">
+    <source src="assets/nomentra-film.mp4" type="video/mp4">
+    <a href="assets/nomentra-film.mp4">Nomentra video</a>
+  </video>
+  <button class="film-close" type="button" popovertarget="film" popovertargetaction="hide" aria-label="Close">&times;</button>
+</div>
+<script>
+(function(){var p=document.getElementById('film');if(!p||!p.showPopover)return;var v=p.querySelector('video');
+document.querySelector('.film-open').addEventListener('click',function(){var r=v.play();if(r&&r.catch)r.catch(function(){})});
+p.addEventListener('toggle',function(e){if(e.newState!=='open')v.pause()});})();
+</script>
 
 <footer class="wrap site-foot">
   <nav aria-label="Footer">

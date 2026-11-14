@@ -85,8 +85,6 @@ p:last-child{margin-bottom:0}
 .phone:nth-child(3){display:none}
 .phones figcaption{margin-top:18px;font-size:13px;color:var(--ink-2);text-align:center}
 .phones.more{margin:0 auto;padding-top:56px}
-.film{margin:0;display:flex;justify-content:center}
-.film video{display:block;width:min(100%,320px);height:auto;aspect-ratio:9/16;border-radius:28px;background:#0B172A;box-shadow:var(--shadow)}
 .phones.more .phones-row{flex-wrap:wrap;row-gap:20px}
 .phones.more .phone{flex:0 1 calc(50% - 7px);max-width:272px}
 .phones.more .phone:nth-child(2){margin-top:0}
@@ -120,6 +118,14 @@ p:last-child{margin-bottom:0}
 .band-hero{padding-top:188px;padding-bottom:44px}
 .band .status{border:0;background:rgba(var(--hero-tag),.44);color:var(--hero-cream)}
 .band .status::before{background:var(--hero-cream)}
+.film-open{margin-left:8px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none}
+.band .film-open::before{width:0;height:0;border-radius:0;background:none;border-style:solid;border-width:5px 0 5px 8px;border-color:transparent transparent transparent var(--hero-cream)}
+.film-open:hover{text-decoration:underline;text-underline-offset:4px}
+.film-pop{border:0;padding:0;background:transparent;overflow:visible;max-width:none;max-height:none}
+.film-pop::backdrop{background:rgba(6,12,22,.8)}
+.film-pop video{display:block;width:min(90vw,calc(84vh * 9 / 16),400px);height:auto;aspect-ratio:9/16;border-radius:24px;background:#0B172A;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)}
+.film-close{position:absolute;top:-14px;right:-14px;width:40px;height:40px;padding:0;border:0;border-radius:50%;background:#F3F0E9;color:#0B172A;font:inherit;font-size:24px;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+@supports not selector(:popover-open){.film-open,.film-pop{display:none}}
 .band h1{color:var(--hero-ink);font-size:clamp(36px,7.5vw,60px);line-height:1.08;max-width:18em}
 .feature-row{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
 .feature-row li{border-top:2px solid rgba(255,255,255,.6);padding-top:10px;font-size:19px;font-weight:700;line-height:1.3}
