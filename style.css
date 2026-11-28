@@ -92,6 +92,9 @@ p:last-child{margin-bottom:0}
 .phone:nth-child(3){display:none}
 .phones figcaption{margin-top:18px;font-size:13px;color:var(--ink-2);text-align:center}
 .phones.more{margin:0 auto;padding-top:56px}
+.seeit h2{font-size:clamp(28px,4.6vw,38px);line-height:1.15;font-weight:500;letter-spacing:-.01em;margin:0 0 28px;text-align:center}
+.seeit .film-phone video{cursor:pointer}
+.phones.more.seeit .phone,.phones.more.seeit .phone:nth-child(2){margin-top:0}
 .phones.more .phones-row{flex-wrap:wrap;row-gap:20px}
 .phones.more .phone{flex:0 1 calc(50% - 7px);max-width:272px}
 .phones.more .phone:nth-child(2){margin-top:0}
