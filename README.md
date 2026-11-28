@@ -1,6 +1,6 @@
 # nomentra.app
 
-Static website for Nomentra: plain HTML and one stylesheet. No build step, no scripts, no analytics, no third-party files.
+Static website for Nomentra: plain HTML and one stylesheet. No build step and no cookies. One third-party file: the Cloudflare Web Analytics script on every page, which counts visits without cookies (added 28 November 2026 at the owner's request; described on the privacy page).
 
 | Path | Page |
 |---|---|
